@@ -1,0 +1,65 @@
+{% extends "admin-base.html" %}
+{% block title %}Employee List{% endblock %}
+{% block content %}
+
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Employee</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Employee</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                Here Admin Can View All Employee. Employee will limited access to all databases.
+                                
+                
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fa fa-id-badge"></i>
+                                DataTable Example
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Phone</th>
+                                                <th>Email</th>
+                                                <th>Join</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Phone</th>
+                                                <th>Email</th>
+                                                <th>Join</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            {% for agent in agents %}
+                                            <tr>
+                                                <td>{{ agent.first_name }} {{ agent.last_name }}</td>
+                                                <td>7308973080</td>
+                                                <td>{{ agent.email }}</td>
+                                                <td>{{ agent.email_confirmed_at.date() }}</td>
+                                                <td><a href="/"><i class="fa fa-pencil-square" aria-hidden="true"></i></a></td>
+                                                <td><a href="/admin/agent-delete/{{ agent.id }}"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+{% endblock %}

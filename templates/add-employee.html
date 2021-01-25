@@ -1,0 +1,75 @@
+{% extends "admin-base.html" %}
+{% block title %}New Employee{% endblock %}
+{% block content %}
+
+                    <div class="container-fluid">
+                        <h1 class="mt-4">New Employee</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">New Employee</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                Here Admin Can Add New Employee. Employee will limited access to all databases.
+                                Joining Date of the employee will be the date when the record is created.                              
+                
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fa fa-id-badge"></i>
+                                DataTable Example
+                            </div>
+                            <div class="card-body">
+                                <form method="post">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                          <label for="inputEmail4">First Name</label>
+                                          <input type="text" class="form-control" id="name" placeholder="First Name" name="firstName">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputEmail4">Last Name</label>
+                                            <input type="text" class="form-control" id="name" placeholder="Last Name" name="lastName">
+                                          </div>
+                                        <div class="form-group col-md-4">
+                                          <label for="inputPassword4">Phone Number</label>
+                                          <input type="number" class="form-control" id="inputPhone" placeholder="Phone Number" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                      <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email">
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" name="password">
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="inputAddress">Address</label>
+                                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address">
+                                    </div>
+                                    <div class="form-row">
+                                      <div class="form-group col-md-6">
+                                        <label for="inputCity">City</label>
+                                        <input type="text" class="form-control" id="inputCity" name="city" placeholder="City">
+                                      </div>
+                                      <div class="form-group col-md-4">
+                                        <label for="inputCity">State</label>
+                                        <input type="text" class="form-control" id="inputCity" placeholder="State" name="state">
+                                      </div>
+                                      <div class="form-group col-md-2">
+                                        <label for="inputZip">Pin</label>
+                                        <input type="text" class="form-control" id="inputPin" name="pin" placeholder="Pin Code">
+                                      </div>
+                                    </div>
+            
+                                    <button type="submit" class="btn btn-primary">Add New Employee</button>
+                                  </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+{% endblock %}
